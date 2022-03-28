@@ -12,5 +12,28 @@ const tutorials = [
 ];
 
 const titleCased = () => {
-  return tutorials
+  let list = []
+  function capital(obj){ 
+    return obj.charAt(0).toUpperCase() + obj.slice(1);
+  }
+  for (let obj of tutorials){
+    list.push(obj.split(' ').map(capital).join(' '))
+    }
+  return list
 }
+
+/*
+const titleCased = (arr) => {
+  let list = []
+  function capital(obj){ 
+    return obj.charAt(0).toUpperCase() + obj.slice(1);
+  }
+  for (let obj of arr){
+    list.push(obj.split(' ').map(capital).join(' '))
+    }
+  return list
+}
+titleCased(tutorials);
+*/
+
+//titleCased(tutorials);
